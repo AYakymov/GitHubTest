@@ -8,13 +8,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPageTest {
-    private WebDriver driver;
+
+   private WebDriver driver;
     private LoginPage loginPage;
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.gecko.driver", "D:\\MyProject\\testselenium\\drivers\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver", "D:\\MyProject\\seleniumtest\\driver\\geckodriver.exe");
+        driver=new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://github.com/login");
