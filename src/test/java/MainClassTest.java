@@ -1,5 +1,6 @@
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -10,8 +11,10 @@ private MainPage mainPage;
 
 @Before
     public void setUp(){
-    System.setProperty("webdriver.gecko.driver", "D:\\MyProject\\seleniumtest\\driver\\geckodriver.exe");
-    driver=new FirefoxDriver();
+//    System.setProperty("webdriver.gecko.driver", "D:\\MyProject\\seleniumtest\\driver\\geckodriver.exe");
+//    driver=new FirefoxDriver();
+    System.setProperty("webdriver.chrome.driver", "D:\\MyProject\\seleniumtest\\driver\\chromedriver.exe");
+    driver= new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     driver.get("https://github.com/");
